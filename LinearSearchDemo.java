@@ -12,17 +12,22 @@ public class LinearSearchDemo {
     }
 
     public static void main (String[] args) {
+        // Creates a new ArrayList
         ArrayList<Integer> numbers = new ArrayList<Integer>();
 
+        // New random object
         Random rand = new Random();
 
+        // Adds 100 random numbers to the numbers ArrayList
         for (int i = 0; i < 100; i++) {
             numbers.add(rand.nextInt(100));
         }
 
+        // Prints numbers
         System.out.print("NUMBERS: ");
         System.out.println(numbers);
 
+        // Searches for number in ArrayList and detects if it is there or not.
         Scanner scnr = new Scanner(System.in);
         System.out.print("Enter a value to search: ");
         int key = scnr.nextInt();
