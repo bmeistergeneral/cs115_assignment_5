@@ -13,14 +13,19 @@ public class LinearSearchDemo {
     public static void main (String[] args) {
         ArrayList<Integer> numbers = new ArrayList<Integer>();
 
-        System.out.print("NUMBERS: ");
-        for (int i = 0; i < numbers.size(); i++) {
-            System.out.print(numbers.get(i) + " ");
+        Scanner scnr2 = new Scanner(System.in);
+        System.out.println("Enter 10 integers.");
+
+        for (int i = 0; i < 10; i++) {
+            System.out.printf("Enter number %d: \n", i + 1);
+            numbers.add(scnr2.nextInt());
         }
-        System.out.println();
+
+        System.out.print("NUMBERS: ");
+        System.out.println(numbers);
 
         Scanner scnr = new Scanner(System.in);
-        System.out.print("Enter an integer value: ");
+        System.out.print("Enter a value to search: ");
         int key = scnr.nextInt();
         int keyIndex = linearSearch(numbers, key);
 
