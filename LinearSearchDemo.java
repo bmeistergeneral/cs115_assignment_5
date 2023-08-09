@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Random;
 public class LinearSearchDemo {
     private static int linearSearch(ArrayList<Integer> numbers, int key) {
         for (int i = 0; i < numbers.size(); i++) {
@@ -13,12 +14,10 @@ public class LinearSearchDemo {
     public static void main (String[] args) {
         ArrayList<Integer> numbers = new ArrayList<Integer>();
 
-        Scanner scnr2 = new Scanner(System.in);
-        System.out.println("Enter 10 integers.");
+        Random rand = new Random();
 
-        for (int i = 0; i < 10; i++) {
-            System.out.printf("Enter number %d: \n", i + 1);
-            numbers.add(scnr2.nextInt());
+        for (int i = 0; i < 100; i++) {
+            numbers.add(rand.nextInt(100));
         }
 
         System.out.print("NUMBERS: ");
